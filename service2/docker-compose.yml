@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  service2:
+    build:
+      context: .
+    networks:
+      - app-network
+    ports:
+      - "5002:5002"
+networks:
+  app-network:
+    external: true
